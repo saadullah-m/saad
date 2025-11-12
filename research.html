@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research - Saad Ullah | Mathematics Researcher</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #7f8c8d;
+            --accent: #3498db;
+            --light: #f8f9fa;
+            --dark: #2c3e50;
+            --text: #333333;
+            --background: #ffffff;
+            --border: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--background);
+            font-weight: 400;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header & Navigation - Standardized */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Source Serif Pro', serif;
+        }
+
+        .logo-symbol {
+            color: var(--accent);
+            font-weight: 400;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            font-size: 0.85rem;
+            transition: color 0.3s ease;
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        nav a.active {
+            color: var(--accent);
+        }
+
+        nav a.active:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--accent);
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.3rem;
+            cursor: pointer;
+            color: var(--primary);
+        }
+
+        /* Page Header - Standardized with increased height */
+        .page-header {
+            padding: 8rem 0 3rem;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            text-align: center;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .page-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-family: 'Source Serif Pro', serif;
+        }
+
+        .page-subtitle {
+            font-size: 1rem;
+            color: var(--secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        /* Main Sections - Standardized */
+        .main-section {
+            padding: 3rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+            font-family: 'Source Serif Pro', serif;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 3px;
+            background: var(--accent);
+        }
+
+        /* Research Overview */
+        .research-overview {
+            background: var(--light);
+        }
+
+        .overview-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .overview-text {
+            font-size: 0.95rem;
+        }
+
+        .overview-text p {
+            margin-bottom: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .research-highlights {
+            background: white;
+            padding: 1.8rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .research-highlights h3 {
+            margin-bottom: 1.2rem;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .highlights-list {
+            list-style: none;
+        }
+
+        .highlights-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .highlights-list li:before {
+            content: '▶';
+            color: var(--accent);
+            position: absolute;
+            left: 0;
+            font-size: 0.7rem;
+        }
+
+        /* FYP Project Section */
+        .fyp-project {
+            background: var(--background);
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .project-header {
+            background: var(--primary);
+            color: white;
+            padding: 1.8rem;
+            text-align: center;
+        }
+
+        .project-header h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-family: 'Source Serif Pro', serif;
+        }
+
+        .project-type {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .project-content {
+            padding: 2rem;
+        }
+
+        .project-description {
+            margin-bottom: 1.5rem;
+        }
+
+        .project-description p {
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .project-description ul {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-description li {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .download-section {
+            text-align: center;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .btn {
+            padding: 0.8rem 1.8rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.9rem;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
+        }
+
+        /* Supervisor Section */
+        .supervisor-section {
+            background: var(--light);
+        }
+
+        .supervisor-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2.5rem;
+            align-items: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .supervisor-image {
+            text-align: center;
+        }
+
+        .supervisor-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .supervisor-info h2 {
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            font-family: 'Source Serif Pro', serif;
+            font-size: 1.4rem;
+        }
+
+        .supervisor-role {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+
+        .supervisor-info p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .supervisor-contact {
+            margin-top: 1.2rem;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        /* Research Interests */
+        .research-interests {
+            background: var(--background);
+        }
+
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .interest-card {
+            background: white;
+            padding: 2rem 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid transparent;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .interest-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            border-top: 4px solid var(--accent);
+        }
+
+        .interest-icon {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 1.2rem;
+        }
+
+        .interest-card h3 {
+            margin-bottom: 0.8rem;
+            color: var(--primary);
+            font-family: 'Source Serif Pro', serif;
+            font-size: 1.2rem;
+        }
+
+        .interest-card p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* Contact CTA - Standardized */
+        .contact-cta {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+        }
+
+        .contact-cta .section-title {
+            color: white;
+        }
+
+        .contact-cta .section-title:after {
+            background: white;
+        }
+
+        .contact-cta p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* Footer - Standardized */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            margin: 1.2rem 0;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.3rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+        }
+
+        .copyright {
+            margin-top: 1.2rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.8rem;
+        }
+
+        /* Responsive Design - Standardized */
+        @media (max-width: 968px) {
+            .overview-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .supervisor-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .page-header {
+                padding: 6rem 0 2rem;
+                min-height: 250px;
+            }
+
+            .page-title {
+                font-size: 1.8rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .project-content {
+                padding: 1.5rem;
+            }
+
+            .supervisor-img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .interests-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-header {
+                padding: 1.5rem;
+            }
+
+            .project-header h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-symbol">Saad</span>
+                Ullah
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="research.html" class="active">Research</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="achievements.html">Experiences & Achievements</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Research</h1>
+            <p class="page-subtitle">Exploring the intersection of Algebraic Geometry and Cryptography through
+                theoretical and applied mathematical research</p>
+        </div>
+    </section>
+
+    <!-- Research Overview -->
+    <section class="research-overview main-section">
+        <div class="container">
+            <div class="overview-content">
+                <div class="overview-text">
+                    <h2 class="section-title">Research Overview</h2>
+                    <p>My research journey has been centered around exploring the deep connections between Algebraic
+                        Geometry and modern cryptographic systems. This interdisciplinary approach has allowed me to
+                        apply geometric principles to enhance security protocols and develop new perspectives on
+                        cryptographic challenges.</p>
+
+                    <p>During my undergraduate studies, I undertook an independent study of Algebraic Geometry under the
+                        guidance of Dr. Sohail Iqbal. This exploration revealed the profound connections between
+                        geometric structures and algebraic equations, providing me with powerful tools to analyze and
+                        improve cryptographic systems.</p>
+
+                    <p>My Final Year Project, "Elliptic Curve Cryptography," represents a practical application of these
+                        mathematical concepts, where I investigated the security advantages and computational efficiency
+                        of elliptic curves in cryptographic protocols.</p>
+
+                    <p>Currently, I continue to deepen my understanding of Algebraic Geometry, focusing on its
+                        theoretical foundations while maintaining connections to applicable domains where geometric
+                        insights can solve complex computational problems in cryptography and beyond.</p>
+                </div>
+                <div class="research-highlights">
+                    <h3>Research Highlights</h3>
+                    <ul class="highlights-list">
+                        <li>Study of Algebraic Geometry under faculty guidance</li>
+                        <li>Application of geometric principles to cryptographic systems</li>
+                        <li>FYP on Elliptic Curve Cryptography implementation and analysis</li>
+                        <li>Exploration of computational aspects of algebraic varieties</li>
+                        <li>Integration of theoretical mathematics with practical applications</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FYP Project Section -->
+    <section class="fyp-project main-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Final Year Project</h2>
+            </div>
+            <div class="project-card">
+                <div class="project-header">
+                    <h2>Elliptic Curve Cryptography</h2>
+                    <div class="project-type">Final Year Project - Bachelors in Mathematics</div>
+                </div>
+                <div class="project-content">
+                    <div class="project-description">
+                        <p>This project explores the mathematical foundations and practical implementations of Elliptic
+                            Curve Cryptography (ECC), a public-key cryptography approach that offers stronger security
+                            per bit compared to traditional cryptographic systems.</p>
+
+                        <p>The research investigates the algebraic structure of elliptic curves over finite fields and
+                            their application in creating efficient cryptographic protocols. Key areas of focus include:
+                        </p>
+
+                        <ul>
+                            <li>Mathematical properties of elliptic curves and their group structure</li>
+                            <li>Elliptic Curve Discrete Logarithm Problem (ECDLP) and its security implications</li>
+                            <li>Implementation of ECC for key exchange and digital signatures</li>
+                            <li>Comparative analysis with DLP and other cryptographic systems</li>
+                            <li>Computational efficiency and security advantages of ECC</li>
+                        </ul>
+
+                        <p>This work demonstrates how abstract mathematical concepts from algebraic geometry and number
+                            theory can be applied to create practical, secure communication systems.</p>
+                    </div>
+                    <div class="download-section">
+                        <a href="https://drive.google.com/file/d/12Qf6GBIcqfOJYxj7ypn0ssC4uiwKIvlp/view?usp=drive_link"
+                            class="btn btn-primary" download>
+                            <i class="fas fa-download"></i> Download Full Report (PDF)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Supervisor Section -->
+    <section class="supervisor-section main-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Research Supervisor</h2>
+            </div>
+            <div class="supervisor-content">
+                <div class="supervisor-image">
+                    <img src="images/Sir pic.png" alt="Dr. Sohail Iqbal" class="supervisor-img"
+                        onerror="this.src='https://via.placeholder.com/200x200/2c3e50/ffffff?text=Dr.+Sohail+Iqbal'">
+                </div>
+                <div class="supervisor-info">
+                    <h2>Dr. Sohail Iqbal</h2>
+                    <span class="supervisor-role">FYP Supervisor & Course Instructor</span>
+                    <p>Dr. Sohail Iqbal has been instrumental in guiding my research journey, particularly in my
+                        independent study of Algebraic Geometry and its applications to cryptography. His expertise in
+                        mathematical structures and computational methods has provided invaluable insights throughout my
+                        undergraduate research.</p>
+
+                    <p>Under his mentorship, I developed a comprehensive understanding of advanced mathematical concepts
+                        and learned to apply theoretical knowledge to practical problems in cryptography and security
+                        systems.</p>
+
+                    <div class="supervisor-contact">
+                        <div class="contact-info">
+                            <i class="fas fa-envelope"></i>
+                            <span>sohail.iqbal@comsats.edu.pk</span>
+                        </div>
+                        <div class="contact-info">
+                            <i class="fas fa-university"></i>
+                            <span>Department of Mathematics, COMSATS University Islamabad</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Interests -->
+    <section class="research-interests main-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Research Interests</h2>
+            </div>
+            <div class="interests-grid">
+                <div class="interest-card">
+                    <div class="interest-icon">
+                        <i class="fas fa-shapes"></i>
+                    </div>
+                    <h3>Algebraic Geometry</h3>
+                    <p>Study of geometric structures defined by polynomial equations and their algebraic properties,
+                        with applications to cryptographic systems.</p>
+                </div>
+
+                <div class="interest-card">
+                    <div class="interest-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Cryptography</h3>
+                    <p>Mathematical foundations of secure communication, focusing on elliptic curve cryptography and
+                        other advanced cryptographic protocols.</p>
+                </div>
+
+                <div class="interest-card">
+                    <div class="interest-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Computational Mathematics</h3>
+                    <p>Algorithmic approaches to solving mathematical problems, particularly in algebra and number
+                        theory with cryptographic applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta main-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Research Collaboration</h2>
+            </div>
+            <p>Interested in discussing mathematical research, collaboration opportunities, or potential graduate
+                studies? I'm always open to exploring new research directions and academic partnerships.</p>
+            <a href="contact.html" class="btn btn-secondary">
+                <i class="fas fa-paper-plane"></i> Discuss Research
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <a href="index.html" class="logo" style="color: white; justify-content: center; margin-bottom: 1rem;">
+                <span class="logo-symbol">Saad</span>
+                Ullah
+            </a>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/saad-ullah-490305202"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/saadullah-m"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/su.abbasi?igsh=MWd3ZTU5Mjd1b2NibA=="><i class="fab fa-instagram"></i></a>
+                <a href="mailto:saadabbasi3018@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <div class="copyright">
+                &copy; 2024 Saad Ullah. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.mobile-menu');
+        const navMenu = document.querySelector('nav ul');
+        const header = document.getElementById('header');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Navbar scroll effect - Standardized
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.style.padding = '0.8rem 0';
+                header.style.boxShadow = '0 5px 20px rgba(0,0,0,0.1)';
+            } else {
+                header.style.padding = '1rem 0';
+                header.style.boxShadow = 'none';
+            }
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    navMenu.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

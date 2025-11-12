@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saad Ullah | Mathematics Researcher</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #7f8c8d;
+            --accent: #3498db;
+            --light: #f8f9fa;
+            --dark: #2c3e50;
+            --text: #333333;
+            --background: #ffffff;
+            --border: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--background);
+            font-weight: 400;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header & Navigation - Standardized */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Source Serif Pro', serif;
+        }
+
+        .logo-symbol {
+            color: var(--accent);
+            font-weight: 400;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            font-size: 0.85rem;
+            transition: color 0.3s ease;
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        nav a.active {
+            color: var(--accent);
+        }
+
+        nav a.active:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--accent);
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.3rem;
+            cursor: pointer;
+            color: var(--primary);
+        }
+
+        /* Hero Section - Adjusted to match spacing */
+        .hero {
+            padding: 7rem 0 3rem;
+            background: 
+                linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.9)),
+                url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover;
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: white;
+            font-family: 'Source Serif Pro', serif;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            color: #ecf0f1;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+            font-family: 'Source Serif Pro', serif;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            color: #ecf0f1;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 0.8rem 1.8rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.9rem;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* Main Sections - Standardized padding */
+        .main-section {
+            padding: 3rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+            font-family: 'Source Serif Pro', serif;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 3px;
+            background: var(--accent);
+        }
+
+        /* About Preview Section */
+        .about-preview {
+            background: var(--background);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 0.95rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .profile-image {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .btn-container {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: flex-start;
+            gap: 1rem;
+        }
+
+        /* Research Interests */
+        .research-interests {
+            background: var(--light);
+        }
+
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .interest-card {
+            background: white;
+            padding: 2rem 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid transparent;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .interest-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+            border-top: 4px solid var(--accent);
+        }
+
+        .interest-icon {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 1.2rem;
+        }
+
+        .interest-card h3 {
+            margin-bottom: 0.8rem;
+            color: var(--primary);
+            font-family: 'Source Serif Pro', serif;
+            font-size: 1.2rem;
+        }
+
+        .interest-card p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* Education Section */
+        .education-preview {
+            background: var(--background);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-left: 80px;
+        }
+
+        .timeline-date {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 60px;
+            text-align: center;
+            background: var(--accent);
+            color: white;
+            padding: 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+
+        .timeline-content {
+            background: var(--background);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        .timeline-content h3 {
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        .timeline-content .institution {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .timeline-content p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .btn-center {
+            text-align: center;
+            margin-top: 2.5rem;
+        }
+
+        /* Achievements Section */
+        .achievements-section {
+            background: var(--light);
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .achievement-card {
+            background: white;
+            padding: 1.8rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            border-left: 4px solid var(--accent);
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .achievement-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-family: 'Source Serif Pro', serif;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 1.1rem;
+        }
+
+        .achievement-card h3 i {
+            color: var(--accent);
+        }
+
+        .achievement-issuer {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+
+        .achievement-date {
+            color: var(--secondary);
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .achievement-card p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* Contact CTA */
+        .contact-cta {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+        }
+
+        .contact-cta .section-title {
+            color: white;
+        }
+
+        .contact-cta .section-title:after {
+            background: white;
+        }
+
+        .contact-cta p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer - Standardized */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            margin: 1.2rem 0;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.3rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+        }
+
+        .copyright {
+            margin-top: 1.2rem;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.8rem;
+        }
+
+        /* Responsive Design - Standardized breakpoints */
+        @media (max-width: 968px) {
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .btn-container {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero {
+                padding: 6rem 0 2rem;
+                min-height: 70vh;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 200px;
+                justify-content: center;
+            }
+
+            .btn-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .timeline:before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                padding-left: 60px;
+            }
+
+            .timeline-date {
+                width: 40px;
+                font-size: 0.7rem;
+                padding: 0.3rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .interests-grid,
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-symbol">Saad</span>
+                Ullah
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="achievements.html">Experiences & Achievements</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Saad Ullah</h1>
+                <div class="subtitle">Mathematics Researcher</div>
+                <p>Specializing in Algebraic Geometry with applications in modern computational mathematics. Exploring geometric structures and their algebraic representations to advance mathematical theory and applications.</p>
+                <div class="hero-buttons">
+                    <a href="research.html" class="btn btn-primary">
+                        <i class="fas fa-flask"></i> View Research
+                    </a>
+                    <a href="achievements.html" class="btn btn-secondary">
+                        <i class="fas fa-trophy"></i> Achievements
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Preview Section -->
+    <section class="about-preview main-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am a dedicated mathematics researcher with a strong foundation in abstract algebra and number theory, currently specializing in Algebraic Geometry. My academic journey began with a Bachelor's in Mathematics from COMSATS University Islamabad.</p>
+                    
+                    <p>During my undergraduate studies, I independently pursued advanced topics in Algebraic Geometry under the guidance of my supervisor, exploring the fundamental connections between geometric intuition and algebraic formalism. This interdisciplinary approach has allowed me to apply geometric principles to computational challenges.</p>
+                    
+                    <p>My research focuses on understanding the geometric nature of algebraic varieties and schemes, with particular interest in their computational aspects and applications to modern mathematical problems.</p>
+                    
+                    <div class="btn-container">
+                        <a href="about.html" class="btn btn-primary">
+                            <i class="fas fa-user"></i> Learn More About Me
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <img src="images/profile.png" alt="Saad Ullah" class="profile-image" onerror="this.src='https://via.placeholder.com/500x600/2c3e50/ffffff?text=Saad+Ullah'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Interests -->
+    <section class="research-interests main-section" id="research">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Research Interests</h2>
+            </div>
+            <div class="interests-grid">
+                <div class="interest-card">
+                    <div class="interest-icon">
+                        <i class="fas fa-shapes"></i>
+                    </div>
+                    <h3>Algebraic Geometry</h3>
+                    <p>Study of geometric structures defined by polynomial equations and their algebraic properties.</p>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Computational Algebra</h3>
+                    <p>Algorithmic approaches to solving problems in algebra and algebraic geometry.</p>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">
+                        <i class="fas fa-infinity"></i>
+                    </div>
+                    <h3>Number Theory</h3>
+                    <p>Properties and relationships of numbers, with connections to algebraic geometry.</p>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Cryptography</h3>
+                    <p>Mathematical foundations of secure communication and cryptographic protocols.</p>
+                </div>
+            </div>
+            <div class="btn-center">
+                <a href="research.html" class="btn btn-primary">
+                    <i class="fas fa-arrow-right"></i> Explore All Research Interests
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education-preview main-section" id="education">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Education</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2021-2025</div>
+                    <div class="timeline-content">
+                        <h3>Bachelor of Science in Mathematics</h3>
+                        <div class="institution">COMSATS University Islamabad</div>
+                        <p>Focus on advanced mathematical concepts with specialization in Algebraic Geometry and its applications. Relevant coursework includes Abstract Algebra, Number Theory, Algebraic Geometry, and Computational Mathematics.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2018-2020</div>
+                    <div class="timeline-content">
+                        <h3>ICS (Intermediate in Computer Science)</h3>
+                        <div class="institution">The Peace Group of Schools and Colleges Abbottabad</div>
+                        <p>Foundation in computer science and mathematics with focus on programming fundamentals.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-center">
+                <a href="education.html" class="btn btn-primary">
+                    <i class="fas fa-graduation-cap"></i> View Full Academic History
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="achievements-section main-section" id="achievements">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Key Achievements</h2>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <h3><i class="fas fa-certificate"></i> ICACM 2025</h3>
+                    <span class="achievement-issuer">SIAM CUI Chapter</span>
+                    <span class="achievement-date">2025</span>
+                    <p>Served as Organizer and Technical Coordinator for the International Conference on Applied and Computational Mathematics. Coordinated with international speakers and managed technical aspects of the conference.</p>
+                </div>
+                
+                <div class="achievement-card">
+                    <h3><i class="fas fa-trophy"></i> Battle of Brain Quiz</h3>
+                    <span class="achievement-issuer">NUML Islamabad</span>
+                    <span class="achievement-date">2024</span>
+                    <p>Achieved 1st Runner Up position in the Battle of Brain Quiz Competition, demonstrating exceptional knowledge in mathematics and computational thinking.</p>
+                </div>
+                
+                <div class="achievement-card">
+                    <h3><i class="fas fa-award"></i> Workshop Organization</h3>
+                    <span class="achievement-issuer">SIAM CUI Chapter</span>
+                    <span class="achievement-date">2024-2025</span>
+                    <p>Successfully organized and conducted multiple workshops on LaTeX and Python programming, receiving positive feedback and being re-invited for subsequent sessions.</p>
+                </div>
+            </div>
+            <div class="btn-center">
+                <a href="achievements.html" class="btn btn-primary">
+                    <i class="fas fa-trophy"></i> View All Achievements & Certificates
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta main-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+            </div>
+            <p>I'm always interested in discussing mathematics research, collaboration opportunities, or potential graduate studies. Feel free to reach out if you'd like to connect.</p>
+            <a href="contact.html" class="btn btn-secondary">
+                <i class="fas fa-paper-plane"></i> Send Message
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <a href="index.html" class="logo" style="color: white; justify-content: center; margin-bottom: 1rem;">
+                <span class="logo-symbol">Saad</span>
+                Ullah
+            </a>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/saad-ullah-490305202"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/saadullah-m"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/su.abbasi?igsh=MWd3ZTU5Mjd1b2NibA=="><i class="fab fa-instagram"></i></a>
+                <a href="mailto:saadabbasi3018@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <div class="copyright">
+                &copy; 2024 Saad Ullah. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.mobile-menu');
+        const navMenu = document.querySelector('nav ul');
+        const header = document.getElementById('header');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Navbar scroll effect - Standardized
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.style.padding = '0.8rem 0';
+                header.style.boxShadow = '0 5px 20px rgba(0,0,0,0.1)';
+            } else {
+                header.style.padding = '1rem 0';
+                header.style.boxShadow = 'none';
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    navMenu.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

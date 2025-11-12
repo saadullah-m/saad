@@ -1,0 +1,2265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiences & Achievements - Saad Ullah | Mathematics Researcher</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #7f8c8d;
+            --accent: #3498db;
+            --light: #f8f9fa;
+            --dark: #2c3e50;
+            --text: #333333;
+            --background: #ffffff;
+            --border: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--background);
+            font-weight: 400;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Source Serif Pro', serif;
+        }
+
+        .logo-symbol {
+            color: var(--accent);
+            font-weight: 400;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            font-size: 0.85rem;
+            transition: color 0.3s ease;
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        nav a.active {
+            color: var(--accent);
+        }
+
+        nav a.active:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--accent);
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.3rem;
+            cursor: pointer;
+            color: var(--primary);
+        }
+
+        /* Page Header */
+        .page-header {
+            padding: 7rem 0 2.5rem;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            text-align: center;
+        }
+
+        .page-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-family: 'Source Serif Pro', serif;
+        }
+
+        .page-subtitle {
+            font-size: 1rem;
+            color: var(--secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Main Sections */
+        .main-section {
+            padding: 3rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+            font-family: 'Source Serif Pro', serif;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 3px;
+            background: var(--accent);
+        }
+
+        /* Events Organized Section */
+        .events-organized {
+            background: var(--light);
+            padding: 3rem 0;
+        }
+
+        .workshop-item {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .workshop-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .workshop-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        .workshop-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .workshop-role {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .workshop-date {
+            background: var(--accent);
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            white-space: nowrap;
+            font-size: 0.85rem;
+        }
+
+        .workshop-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: start;
+            margin-bottom: 1.5rem;
+        }
+
+        .workshop-description {
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .workshop-description p {
+            margin-bottom: 1rem;
+        }
+
+        .workshop-images {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .workshop-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 6px;
+            transition: transform 0.3s ease;
+        }
+
+        .workshop-image:hover {
+            transform: scale(1.03);
+        }
+
+        .workshop-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.2rem;
+            margin-bottom: 1.5rem;
+            padding: 1.2rem;
+            background: var(--light);
+            border-radius: 6px;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .detail-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .detail-text {
+            flex: 1;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.2rem;
+            font-size: 0.9rem;
+        }
+
+        .detail-value {
+            color: var(--text);
+            font-size: 0.9rem;
+        }
+
+        /* Video Section */
+        .video-section {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--border);
+        }
+
+        .video-section h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .video-card {
+            background: var(--light);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            border: 1px solid var(--border);
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .video-thumbnail {
+            width: 100%;
+            height: 160px;
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .video-thumbnail:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Font Awesome 6 Free';
+            content: '\f04b';
+            font-weight: 900;
+            color: var(--accent);
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .video-thumbnail:hover:after {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .video-info {
+            padding: 1.2rem;
+        }
+
+        .video-title {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .video-speaker {
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        .video-duration {
+            color: var(--secondary);
+            font-size: 0.8rem;
+        }
+
+        /* Teaching Experience Section */
+        .teaching-experience {
+            background: white;
+            padding: 3rem 0;
+        }
+
+        /* Combined Materials Section */
+        .combined-materials {
+            padding: 3rem 0;
+            background: var(--light);
+        }
+
+        .materials-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .materials-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+        }
+
+        .materials-subtitle {
+            color: var(--secondary);
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .materials-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+        }
+
+        .language-section {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border: 1px solid var(--border);
+        }
+
+        .language-header {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        .language-icon {
+            width: 45px;
+            height: 45px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .language-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .lectures-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1rem;
+        }
+
+        .lecture-item {
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            background: var(--light);
+            border-radius: 6px;
+            transition: transform 0.3s ease;
+            min-height: 120px;
+        }
+
+        .lecture-item:hover {
+            transform: translateY(-3px);
+            background: #e9ecef;
+        }
+
+        .lecture-number {
+            width: 28px;
+            height: 28px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 0.75rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .lecture-info {
+            flex: 1;
+        }
+
+        .lecture-name {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            font-size: 0.85rem;
+            line-height: 1.3;
+        }
+
+        .lecture-links {
+            display: flex;
+            gap: 0.8rem;
+        }
+
+        .material-link {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.75rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .material-link:hover {
+            color: var(--primary);
+        }
+
+        /* Workshop Recordings Section */
+        .workshop-recordings {
+            padding: 3rem 0;
+            background: white;
+        }
+
+        .video-section-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .video-section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+        }
+
+        .video-section-subtitle {
+            color: var(--secondary);
+            font-size: 1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .language-videos {
+            margin-bottom: 2.5rem;
+        }
+
+        .language-videos-header {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        .language-videos-icon {
+            width: 45px;
+            height: 45px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .language-videos-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .recordings-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.2rem;
+        }
+
+        .recording-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .recording-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .video-embed {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+            /* 16:9 aspect ratio */
+            background: var(--light);
+            border-radius: 6px 6px 0 0;
+            overflow: hidden;
+        }
+
+        .video-embed iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .recording-info {
+            padding: 0.8rem;
+        }
+
+        .recording-title {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.4rem;
+            font-size: 0.85rem;
+            line-height: 1.3;
+        }
+
+        .recording-speaker {
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 0.4rem;
+            font-size: 0.8rem;
+        }
+
+        .recording-duration {
+            color: var(--secondary);
+            font-size: 0.75rem;
+        }
+
+        /* Contact CTA */
+        .contact-cta {
+            padding: 3rem 0;
+            background: var(--primary);
+            color: white;
+            text-align: center;
+        }
+
+        .contact-cta .section-title {
+            color: white;
+        }
+
+        .contact-cta .section-title:after {
+            background: white;
+        }
+
+        .contact-cta p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            padding: 0.8rem 1.8rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.9rem;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            margin: 1.2rem 0;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.3rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+        }
+
+        .copyright {
+            margin-top: 1.2rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.8rem;
+        }
+
+        /* Certificates Section */
+        .certificates-section {
+            padding: 3rem 0;
+            background: var(--light);
+        }
+
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .certificate-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .certificate-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .certificate-image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .certificate-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .certificate-card:hover .certificate-image img {
+            transform: scale(1.05);
+        }
+
+        .certificate-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(44, 62, 80, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .certificate-card:hover .certificate-overlay {
+            opacity: 1;
+        }
+
+        .certificate-link {
+            color: white;
+            font-size: 1.5rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+
+        .certificate-link:hover {
+            transform: scale(1.1);
+        }
+
+        .certificate-info {
+            padding: 1.2rem;
+        }
+
+        .certificate-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .certificate-issuer {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .certificate-type {
+            color: var(--secondary);
+            font-size: 0.85rem;
+            display: inline-block;
+            background: var(--light);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+        }
+
+        /* Responsive adjustments for certificates */
+        @media (max-width: 768px) {
+            .certificates-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .certificates-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1100px) {
+
+            .recordings-grid,
+            .lectures-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 968px) {
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .workshop-content {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+
+            .workshop-images {
+                order: -1;
+            }
+
+            .materials-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .videos-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .page-header {
+                padding: 6rem 0 2rem;
+            }
+
+            .page-title {
+                font-size: 1.8rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .workshop-header {
+                flex-direction: column;
+                gap: 0.8rem;
+                text-align: center;
+            }
+
+            .workshop-item {
+                padding: 1.5rem;
+            }
+
+            .workshop-images {
+                grid-template-columns: 1fr;
+            }
+
+            .workshop-details {
+                grid-template-columns: 1fr;
+            }
+
+            .recordings-grid,
+            .lectures-grid,
+            .videos-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .language-header,
+            .language-videos-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 0.6rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-symbol">Saad</span>
+                Ullah
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="achievements.html" class="active">Experiences & Achievements</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Experiences & Achievements</h1>
+            <p class="page-subtitle">Events organized, teaching experience, workshop organization, and educational
+                materials</p>
+        </div>
+    </section>
+
+    <!-- Events Organized Section -->
+    <section class="events-organized">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Events Organized</h2>
+            </div>
+
+            <!-- Event 1: International Conference -->
+            <div class="workshop-item">
+                <div class="workshop-header">
+                    <div>
+                        <h3 class="workshop-title">International Conference on Applied and Computational Mathematics
+                        </h3>
+                        <span class="workshop-role">Organizer & Technical Coordinator</span>
+                    </div>
+                    <span class="workshop-date">2025</span>
+                </div>
+
+                <div class="workshop-content">
+                    <div class="workshop-description">
+                        <p>I had the privilege of serving as the Organizer and Technical Coordinator for the
+                            International Conference on Applied and Computational Mathematics (ICACM 2025). This
+                            prestigious event brought together leading mathematicians, researchers, and academics from
+                            around the world to discuss cutting-edge developments in mathematical sciences.</p>
+                        <p>My responsibilities included managing all technical aspects of the conference, coordinating
+                            with international speakers, overseeing audio-visual setups, and ensuring seamless execution
+                            of parallel sessions. The conference featured 15+ international speakers and attracted over
+                            200 participants, creating a vibrant platform for knowledge exchange and collaboration.</p>
+                    </div>
+                    <div class="workshop-images">
+                        <img src="images/ICACM GP.jpg" alt="Conference Setup" class="workshop-image"
+                            onerror="this.src='https://via.placeholder.com/600x150/3498db/ffffff?text=Conference+Setup'">
+                        <img src="images/ICACM GPO.jpg" alt="Speaker Session" class="workshop-image"
+                            onerror="this.src='https://via.placeholder.com/600x150/2c3e50/ffffff?text=Speaker+Session'">
+                    </div>
+                </div>
+
+                <div class="workshop-details">
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="detail-text">
+                            <div class="detail-label">Venue</div>
+                            <div class="detail-value">COMSATS University Islamabad</div>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+                        <div class="detail-text">
+                            <div class="detail-label">Date</div>
+                            <div class="detail-value">March 15-16, 2025</div>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="detail-text">
+                            <div class="detail-label">Participants</div>
+                            <div class="detail-value">200+ Academics & Researchers</div>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-microphone"></i>
+                        </div>
+                        <div class="detail-text">
+                            <div class="detail-label">Speakers</div>
+                            <div class="detail-value">15+ International Experts</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-section">
+                    <h3><i class="fas fa-video"></i> Conference Recordings</h3>
+                    <div class="videos-grid">
+                        <div class="video-card">
+                            <div class="video-thumbnail" onclick="playVideo('Advances in Computational Mathematics')">
+                                <!-- Video thumbnail -->
+                            </div>
+                            <div class="video-info">
+                                <div class="video-title">Advances in Computational Mathematics</div>
+                                <div class="video-speaker">Dr. Ahmed Khan</div>
+                                <div class="video-duration">45 minutes</div>
+                            </div>
+                        </div>
+                        <div class="video-card">
+                            <div class="video-thumbnail" onclick="playVideo('Mathematical Modeling Applications')">
+                                <!-- Video thumbnail -->
+                            </div>
+                            <div class="video-info">
+                                <div class="video-title">Mathematical Modeling Applications</div>
+                                <div class="video-speaker">Dr. Sarah Mohammad</div>
+                                <div class="video-duration">38 minutes</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event 2: Q K Ghori Seminar Series -->
+            <div class="workshop-item">
+                <div class="workshop-header">
+                    <div>
+                        <h3 class="workshop-title">Q K Ghori Alumni Seminar Series</h3>
+                        <span class="workshop-role">Organizer & Technical Coordinator</span>
+                    </div>
+                    <span class="workshop-date">2024-2025</span>
+                </div>
+
+                <div class="workshop-content">
+                    <div class="workshop-description">
+                        <p>I organized and coordinated the first five sessions of the Q K Ghori Alumni Seminar Series,
+                            creating a platform for knowledge sharing between alumni and current students. This
+                            initiative brought together successful graduates who shared their academic and professional
+                            journeys, providing valuable insights and mentorship opportunities.</p>
+                        <p>Each session focused on different aspects of mathematical research and career development,
+                            featuring alumni working in diverse fields from academic research to industry applications.
+                            My role involved end-to-end coordination including speaker invitations, technical setup,
+                            audience management, and post-event follow-ups.</p>
+                    </div>
+                    <div class="workshop-images">
+                        <img src="images/qk ghori.jpeg" alt="Seminar Session" class="workshop-image"
+                            onerror="this.src='https://via.placeholder.com/600x150/3498db/ffffff?text=Seminar+Session'">
+                        <img src="images/qk ghori 1.jpeg" alt="Alumni Speaker" class="workshop-image"
+                            onerror="this.src='https://via.placeholder.com/600x150/2c3e50/ffffff?text=Alumni+Speaker'">
+                    </div>
+                </div>
+
+                <div class="workshop-details">
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="detail-text">
+                            <div class="detail-label">Venue</div>
+                            <div class="detail-value">COMSATS University Islamabad</div>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+                        <div class="detail-text">
+                            <div class="detail-label">Duration</div>
+                            <div class="detail-value">January - May 2024</div>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="detail-text">
+                            <div class="detail-label">Sessions</div>
+                            <div class="detail-value">5 Seminar Sessions</div>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="detail-text">
+                            <div class="detail-label">Speakers</div>
+                            <div class="detail-value">8 Alumni Experts</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-section">
+                    <h3><i class="fas fa-video"></i> Seminar Recordings</h3>
+                    <div class="videos-grid">
+                        <div class="video-card">
+                            <div class="video-thumbnail" onclick="playVideo('Research Methodologies Session')">
+                                <!-- Video thumbnail -->
+                            </div>
+                            <div class="video-info">
+                                <div class="video-title">Research Methodologies in Pure Mathematics</div>
+                                <div class="video-speaker">Session 1 - Dr. Ali Raza</div>
+                                <div class="video-duration">52 minutes</div>
+                            </div>
+                        </div>
+                        <div class="video-card">
+                            <div class="video-thumbnail" onclick="playVideo('Computational Approaches Session')">
+                                <!-- Video thumbnail -->
+                            </div>
+                            <div class="video-info">
+                                <div class="video-title">Computational Approaches to Number Theory</div>
+                                <div class="video-speaker">Session 2 - Dr. Fatima Noor</div>
+                                <div class="video-duration">48 minutes</div>
+                            </div>
+                        </div>
+                        <div class="video-card">
+                            <div class="video-thumbnail" onclick="playVideo('Cryptography Session')">
+                                <!-- Video thumbnail -->
+                            </div>
+                            <div class="video-info">
+                                <div class="video-title">Algebraic Geometry in Modern Cryptography</div>
+                                <div class="video-speaker">Session 3 - Dr. Hassan Mahmood</div>
+                                <div class="video-duration">55 minutes</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event 3: Tri-Math Quiz Competition -->
+            <div class="workshop-item">
+                <div class="workshop-header">
+                    <div>
+                        <h3 class="workshop-title">Tri-Math Quiz Competition</h3>
+                        <span class="workshop-role">Event Organizer</span>
+                    </div>
+                    <span class="workshop-date">2024</span>
+                </div>
+
+                <div class="workshop-content">
+                    <div class="workshop-description">
+                        <p>I organized the Tri-Math Quiz Competition, an inter-departmental mathematics competition that
+                            challenged students' problem-solving abilities and mathematical knowledge. The event brought
+                            together 15 teams from different departments, creating a vibrant atmosphere of academic
+                            competition and collaboration.</p>
+                        <p>The competition featured multiple rounds including speed mathematics, problem-solving
+                            challenges, and theoretical questions. My responsibilities included designing the
+                            competition structure, coordinating with faculty judges, managing team registrations, and
+                            overseeing the entire event execution. The event was well-received and helped foster greater
+                            interest in mathematical problem-solving among students.</p>
+                    </div>
+                    <div class="workshop-images">
+                        <img src="images/Tri Math G P All.jpeg" alt="Quiz Competition" class="workshop-image"
+                            onerror="this.src='https://via.placeholder.com/600x150/3498db/ffffff?text=Quiz+Competition'">
+                        <img src="images/Tri Math G P.jpeg" alt="Certificate Ceremony" class="workshop-image"
+                            onerror="this.src='https://via.placeholder.com/600x150/2c3e50/ffffff?text=Certificate+Ceremony'">
+                    </div>
+                </div>
+
+                <div class="workshop-details">
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="detail-text">
+                            <div class="detail-label">Venue</div>
+                            <div class="detail-value">COMSATS University Islamabad</div>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+                        <div class="detail-text">
+                            <div class="detail-label">Date</div>
+                            <div class="detail-value">November 2024</div>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="detail-text">
+                            <div class="detail-label">Participants</div>
+                            <div class="detail-value">15 Teams, 45 Students</div>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="detail-text">
+                            <div class="detail-label">Competition</div>
+                            <div class="detail-value">3 Rounds, Multiple Categories</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teaching Experience Section -->
+    <section class="teaching-experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Teaching Experience</h2>
+            </div>
+
+            <!-- Workshop 1: LaTeX and Python for Beginners - 1 -->
+            <div class="workshop-item">
+                <div class="workshop-header">
+                    <div>
+                        <h3 class="workshop-title">Workshop on LaTeX and Python for Beginners - 1</h3>
+                        <span class="workshop-role">Lead Instructor & Organizer</span>
+                    </div>
+                    <span class="workshop-date">2024</span>
+                </div>
+
+                <div class="workshop-content">
+                    <div class="workshop-description">
+                        <p>This comprehensive workshop introduced students to the fundamentals of LaTeX typesetting and
+                            Python programming. The beginner-level course was designed to provide a solid foundation in
+                            both technologies, focusing on practical applications for academic and research purposes.
+                        </p>
+                        <p>Participants learned LaTeX document preparation, mathematical typesetting, and basic Python
+                            programming concepts. The workshop emphasized hands-on learning with real-world examples and
+                            exercises that helped students immediately apply their new skills to their academic work.
+                        </p>
+                    </div>
+                    <div class="workshop-images">
+                        <img src="images/Latex C I.jpeg" alt="Python Session Teaching" class="workshop-image"
+                            onerror="this.src='https://via.placeholder.com/600x150/3498db/ffffff?text=Python+Session'">
+                        <img src="images/Latex C I 1.jpeg" alt="LaTeX Session Teaching" class="workshop-image"
+                            onerror="this.src='https://via.placeholder.com/600x150/2c3e50/ffffff?text=LaTeX+Session'">
+                    </div>
+                </div>
+
+                <div class="workshop-details">
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="detail-text">
+                            <div class="detail-label">Venue</div>
+                            <div class="detail-value">COMSATS University Islamabad</div>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+                        <div class="detail-text">
+                            <div class="detail-label">Date</div>
+                            <div class="detail-value">March 2024</div>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="detail-text">
+                            <div class="detail-label">Participants</div>
+                            <div class="detail-value">50+ Students</div>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="detail-text">
+                            <div class="detail-label">Duration</div>
+                            <div class="detail-value">2 Days Intensive Workshop</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Workshop 2: LaTeX and Python for Beginners - 2 -->
+            <div class="workshop-item">
+                <div class="workshop-header">
+                    <div>
+                        <h3 class="workshop-title">Workshop on LaTeX and Python for Beginners - 2</h3>
+                        <span class="workshop-role">Lead Instructor & Organizer</span>
+                    </div>
+                    <span class="workshop-date">2025</span>
+                </div>
+
+                <div class="workshop-content">
+                    <div class="workshop-description">
+                        <p>Building on the success of the first workshop, this second iteration expanded the curriculum
+                            to include advanced topics and more complex projects. Due to high demand and positive
+                            feedback, we were re-invited to conduct this follow-up workshop with an enhanced curriculum.
+                        </p>
+                        <p>The workshop covered advanced LaTeX features including bibliography management, custom
+                            commands, and presentation design, alongside intermediate Python programming concepts
+                            including data analysis libraries and automation scripts. Participants completed
+                            comprehensive projects that demonstrated their proficiency in both technologies.</p>
+                    </div>
+                    <div class="workshop-images">
+                        <img src="images/workshop2-python.jpg" alt="Advanced Python Teaching" class="workshop-image"
+                            onerror="this.src='https://via.placeholder.com/600x150/3498db/ffffff?text=Advanced+Python'">
+                        <img src="images/workshop2-latex.jpg" alt="Advanced LaTeX Teaching" class="workshop-image"
+                            onerror="this.src='https://via.placeholder.com/600x150/2c3e50/ffffff?text=Advanced+LaTeX'">
+                    </div>
+                </div>
+
+                <div class="workshop-details">
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="detail-text">
+                            <div class="detail-label">Venue</div>
+                            <div class="detail-value">COMSATS University Islamabad</div>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+                        <div class="detail-text">
+                            <div class="detail-label">Date</div>
+                            <div class="detail-value">January 2025</div>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="detail-text">
+                            <div class="detail-label">Participants</div>
+                            <div class="detail-value">60+ Students</div>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="detail-text">
+                            <div class="detail-label">Duration</div>
+                            <div class="detail-value">3 Days Comprehensive Workshop</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Combined Materials Section -->
+    <section class="combined-materials">
+        <div class="container">
+            <div class="materials-header">
+                <h2 class="materials-title">Workshop Materials</h2>
+                <p class="materials-subtitle">Complete set of lecture slides from both workshops</p>
+            </div>
+
+            <div class="materials-grid">
+                <!-- Python Lectures -->
+                <div class="language-section">
+                    <div class="language-header">
+                        <div class="language-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <h3 class="language-title">Python Programming</h3>
+                    </div>
+                    <div class="lectures-grid">
+                        <!-- Python Lecture 1-8 -->
+                        <div class="lecture-item">
+                            <div class="lecture-number">1</div>
+                            <div class="lecture-info">
+                                <div class="lecture-name">Introduction to Python & Basic Syntax</div>
+                                <div class="lecture-links">
+                                    <a href="python-lecture1-slides.pdf" class="material-link" download>
+                                        <i class="fas fa-download"></i> Slides
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lecture-item">
+                            <div class="lecture-number">2</div>
+                            <div class="lecture-info">
+                                <div class="lecture-name">Data Types and Variables</div>
+                                <div class="lecture-links">
+                                    <a href="python-lecture2-slides.pdf" class="material-link" download>
+                                        <i class="fas fa-download"></i> Slides
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lecture-item">
+                            <div class="lecture-number">3</div>
+                            <div class="lecture-info">
+                                <div class="lecture-name">Control Structures & Loops</div>
+                                <div class="lecture-links">
+                                    <a href="python-lecture3-slides.pdf" class="material-link" download>
+                                        <i class="fas fa-download"></i> Slides
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lecture-item">
+                            <div class="lecture-number">4</div>
+                            <div class="lecture-info">
+                                <div class="lecture-name">Functions and Modules</div>
+                                <div class="lecture-links">
+                                    <a href="python-lecture4-slides.pdf" class="material-link" download>
+                                        <i class="fas fa-download"></i> Slides
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lecture-item">
+                            <div class="lecture-number">5</div>
+                            <div class="lecture-info">
+                                <div class="lecture-name">File Handling & Data Processing</div>
+                                <div class="lecture-links">
+                                    <a href="python-lecture5-slides.pdf" class="material-link" download>
+                                        <i class="fas fa-download"></i> Slides
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lecture-item">
+                            <div class="lecture-number">6</div>
+                            <div class="lecture-info">
+                                <div class="lecture-name">NumPy for Mathematical Computing</div>
+                                <div class="lecture-links">
+                                    <a href="python-lecture6-slides.pdf" class="material-link" download>
+                                        <i class="fas fa-download"></i> Slides
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lecture-item">
+                            <div class="lecture-number">7</div>
+                            <div class="lecture-info">
+                                <div class="lecture-name">Data Visualization with Matplotlib</div>
+                                <div class="lecture-links">
+                                    <a href="python-lecture7-slides.pdf" class="material-link" download>
+                                        <i class="fas fa-download"></i> Slides
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lecture-item">
+                            <div class="lecture-number">8</div>
+                            <div class="lecture-info">
+                                <div class="lecture-name">Final Project & Advanced Topics</div>
+                                <div class="lecture-links">
+                                    <a href="python-lecture8-slides.pdf" class="material-link" download>
+                                        <i class="fas fa-download"></i> Slides
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LaTeX Lectures -->
+                <div class="language-section">
+                    <div class="language-header">
+                        <div class="language-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3 class="language-title">LaTeX Typesetting</h3>
+                    </div>
+                    <div class="lectures-grid">
+                        <!-- LaTeX Lecture 1-10 -->
+                        <div class="lecture-item">
+                            <div class="lecture-number">1</div>
+                            <div class="lecture-info">
+                                <div class="lecture-name">Introduction to LaTeX & Document Structure</div>
+                                <div class="lecture-links">
+                                    <a href="latex-lecture1-slides.pdf" class="material-link" download>
+                                        <i class="fas fa-download"></i> Slides
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lecture-item">
+                            <div class="lecture-number">2</div>
+                            <div class="lecture-info">
+                                <div class="lecture-name">Basic Formatting & Sections</div>
+                                <div class="lecture-links">
+                                    <a href="latex-lecture2-slides.pdf" class="material-link" download>
+                                        <i class="fas fa-download"></i> Slides
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lecture-item">
+                            <div class="lecture-number">3</div>
+                            <div class="lecture-info">
+                                <div class="lecture-name">Mathematical Typesetting</div>
+                                <div class="lecture-links">
+                                    <a href="latex-lecture3-slides.pdf" class="material-link" download>
+                                        <i class="fas fa-download"></i> Slides
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lecture-item">
+                            <div class="lecture-number">4</div>
+                            <div class="lecture-info">
+                                <div class="lecture-name">Tables and Figures</div>
+                                <div class="lecture-links">
+                                    <a href="latex-lecture4-slides.pdf" class="material-link" download>
+                                        <i class="fas fa-download"></i> Slides
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lecture-item">
+                            <div class="lecture-number">5</div>
+                            <div class="lecture-info">
+                                <div class="lecture-name">Bibliography & References</div>
+                                <div class="lecture-links">
+                                    <a href="latex-lecture5-slides.pdf" class="material-link" download>
+                                        <i class="fas fa-download"></i> Slides
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lecture-item">
+                            <div class="lecture-number">6</div>
+                            <div class="lecture-info">
+                                <div class="lecture-name">Custom Commands & Environments</div>
+                                <div class="lecture-links">
+                                    <a href="latex-lecture6-slides.pdf" class="material-link" download>
+                                        <i class="fas fa-download"></i> Slides
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lecture-item">
+                            <div class="lecture-number">7</div>
+                            <div class="lecture-info">
+                                <div class="lecture-name">Presentation with Beamer</div>
+                                <div class="lecture-links">
+                                    <a href="latex-lecture7-slides.pdf" class="material-link" download>
+                                        <i class="fas fa-download"></i> Slides
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lecture-item">
+                            <div class="lecture-number">8</div>
+                            <div class="lecture-info">
+                                <div class="lecture-name">Thesis and Report Formatting</div>
+                                <div class="lecture-links">
+                                    <a href="latex-lecture8-slides.pdf" class="material-link" download>
+                                        <i class="fas fa-download"></i> Slides
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lecture-item">
+                            <div class="lecture-number">9</div>
+                            <div class="lecture-info">
+                                <div class="lecture-name">Advanced Mathematical Typesetting</div>
+                                <div class="lecture-links">
+                                    <a href="latex-lecture9-slides.pdf" class="material-link" download>
+                                        <i class="fas fa-download"></i> Slides
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lecture-item">
+                            <div class="lecture-number">10</div>
+                            <div class="lecture-info">
+                                <div class="lecture-name">Final Project & Best Practices</div>
+                                <div class="lecture-links">
+                                    <a href="latex-lecture10-slides.pdf" class="material-link" download>
+                                        <i class="fas fa-download"></i> Slides
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workshop Recordings Section -->
+    <section class="workshop-recordings">
+        <div class="container">
+            <div class="video-section-header">
+                <h2 class="video-section-title">Lecture Recordings</h2>
+                <p class="video-section-subtitle">Complete video recordings of all workshop lectures</p>
+            </div>
+
+            <!-- Python Videos -->
+            <div class="language-videos">
+                <div class="language-videos-header">
+                    <div class="language-videos-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3 class="language-videos-title">Python Programming Recordings</h3>
+                </div>
+                <div class="recordings-grid">
+                    <!-- Python Video 1-8 -->
+                    <div class="recording-card">
+                        <div class="video-embed">
+                            <iframe width="560" height="315"
+                                src="https://www.youtube.com/embed/03oSqY8czqc?si=cOHDIsaEKef2hOxE"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="recording-info">
+                            <div class="recording-title">Introduction to Python & Basic Syntax</div>
+                            <div class="recording-speaker">Python Lecture 1</div>
+                            <div class="recording-duration">4 minutes</div>
+                        </div>
+                    </div>
+                    <div class="recording-card">
+                        <div class="video-embed">
+                            <iframe src="https://www.youtube.com/embed/PYTHON_LECTURE_2" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="recording-info">
+                            <div class="recording-title">Data Types and Variables</div>
+                            <div class="recording-speaker">Python Lecture 2</div>
+                            <div class="recording-duration">50 minutes</div>
+                        </div>
+                    </div>
+                    <div class="recording-card">
+                        <div class="video-embed">
+                            <iframe src="https://www.youtube.com/embed/PYTHON_LECTURE_3" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="recording-info">
+                            <div class="recording-title">Control Structures & Loops</div>
+                            <div class="recording-speaker">Python Lecture 3</div>
+                            <div class="recording-duration">55 minutes</div>
+                        </div>
+                    </div>
+                    <div class="recording-card">
+                        <div class="video-embed">
+                            <iframe src="https://www.youtube.com/embed/PYTHON_LECTURE_4" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="recording-info">
+                            <div class="recording-title">Functions and Modules</div>
+                            <div class="recording-speaker">Python Lecture 4</div>
+                            <div class="recording-duration">60 minutes</div>
+                        </div>
+                    </div>
+                    <div class="recording-card">
+                        <div class="video-embed">
+                            <iframe src="https://www.youtube.com/embed/PYTHON_LECTURE_5" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="recording-info">
+                            <div class="recording-title">File Handling & Data Processing</div>
+                            <div class="recording-speaker">Python Lecture 5</div>
+                            <div class="recording-duration">50 minutes</div>
+                        </div>
+                    </div>
+                    <div class="recording-card">
+                        <div class="video-embed">
+                            <iframe src="https://www.youtube.com/embed/PYTHON_LECTURE_6" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="recording-info">
+                            <div class="recording-title">NumPy for Mathematical Computing</div>
+                            <div class="recording-speaker">Python Lecture 6</div>
+                            <div class="recording-duration">65 minutes</div>
+                        </div>
+                    </div>
+                    <div class="recording-card">
+                        <div class="video-embed">
+                            <iframe src="https://www.youtube.com/embed/PYTHON_LECTURE_7" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="recording-info">
+                            <div class="recording-title">Data Visualization with Matplotlib</div>
+                            <div class="recording-speaker">Python Lecture 7</div>
+                            <div class="recording-duration">55 minutes</div>
+                        </div>
+                    </div>
+                    <div class="recording-card">
+                        <div class="video-embed">
+                            <iframe src="https://www.youtube.com/embed/PYTHON_LECTURE_8" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="recording-info">
+                            <div class="recording-title">Final Project & Advanced Topics</div>
+                            <div class="recording-speaker">Python Lecture 8</div>
+                            <div class="recording-duration">70 minutes</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LaTeX Videos -->
+            <div class="language-videos">
+                <div class="language-videos-header">
+                    <div class="language-videos-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3 class="language-videos-title">LaTeX Typesetting Recordings</h3>
+                </div>
+                <div class="recordings-grid">
+                    <!-- LaTeX Video 1-8 -->
+                    <div class="recording-card">
+                        <div class="video-embed">
+                            <iframe src="https://www.youtube.com/embed/LATEX_LECTURE_1" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="recording-info">
+                            <div class="recording-title">Introduction to LaTeX & Document Structure</div>
+                            <div class="recording-speaker">LaTeX Lecture 1</div>
+                            <div class="recording-duration">40 minutes</div>
+                        </div>
+                    </div>
+                    <div class="recording-card">
+                        <div class="video-embed">
+                            <iframe src="https://www.youtube.com/embed/LATEX_LECTURE_2" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="recording-info">
+                            <div class="recording-title">Basic Formatting & Sections</div>
+                            <div class="recording-speaker">LaTeX Lecture 2</div>
+                            <div class="recording-duration">45 minutes</div>
+                        </div>
+                    </div>
+                    <div class="recording-card">
+                        <div class="video-embed">
+                            <iframe src="https://www.youtube.com/embed/LATEX_LECTURE_3" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="recording-info">
+                            <div class="recording-title">Mathematical Typesetting</div>
+                            <div class="recording-speaker">LaTeX Lecture 3</div>
+                            <div class="recording-duration">55 minutes</div>
+                        </div>
+                    </div>
+                    <div class="recording-card">
+                        <div class="video-embed">
+                            <iframe src="https://www.youtube.com/embed/LATEX_LECTURE_4" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="recording-info">
+                            <div class="recording-title">Tables and Figures</div>
+                            <div class="recording-speaker">LaTeX Lecture 4</div>
+                            <div class="recording-duration">50 minutes</div>
+                        </div>
+                    </div>
+                    <div class="recording-card">
+                        <div class="video-embed">
+                            <iframe src="https://www.youtube.com/embed/LATEX_LECTURE_5" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="recording-info">
+                            <div class="recording-title">Bibliography & References</div>
+                            <div class="recording-speaker">LaTeX Lecture 5</div>
+                            <div class="recording-duration">45 minutes</div>
+                        </div>
+                    </div>
+                    <div class="recording-card">
+                        <div class="video-embed">
+                            <iframe src="https://www.youtube.com/embed/LATEX_LECTURE_6" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="recording-info">
+                            <div class="recording-title">Custom Commands & Environments</div>
+                            <div class="recording-speaker">LaTeX Lecture 6</div>
+                            <div class="recording-duration">60 minutes</div>
+                        </div>
+                    </div>
+                    <div class="recording-card">
+                        <div class="video-embed">
+                            <iframe src="https://www.youtube.com/embed/LATEX_LECTURE_7" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="recording-info">
+                            <div class="recording-title">Presentation with Beamer</div>
+                            <div class="recording-speaker">LaTeX Lecture 7</div>
+                            <div class="recording-duration">65 minutes</div>
+                        </div>
+                    </div>
+                    <div class="recording-card">
+                        <div class="video-embed">
+                            <iframe src="https://www.youtube.com/embed/LATEX_LECTURE_8" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="recording-info">
+                            <div class="recording-title">Thesis and Report Formatting</div>
+                            <div class="recording-speaker">LaTeX Lecture 8</div>
+                            <div class="recording-duration">70 minutes</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Certificates Section -->
+    <section class="certificates-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Certificates & Awards</h2>
+                <p class="page-subtitle">Recognition for event organization, teaching, and competition achievements</p>
+            </div>
+
+            <div class="certificates-grid">
+                <!-- Certificate 1: LaTeX Course 1 -->
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="images/latex cert.jpg" alt="LaTeX Course 1 Certificate"
+                            onerror="this.src='https://via.placeholder.com/300x200/3498db/ffffff?text=LaTeX+Course+1'">
+                        <div class="certificate-overlay">
+                            <a href="images/latex cert.jpg" class="certificate-link" target="_blank">
+                                <i class="fas fa-expand"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h3 class="certificate-title">LaTeX Course 1</h3>
+                        <p class="certificate-issuer">SIAM CUI Chapter</p>
+                        <span class="certificate-type">For organizing and conducting workshop</span>
+                    </div>
+                </div>
+
+                <!-- Certificate 2: Python Course 1 -->
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="images/Python Course.jpg" alt="Python Course 1 Certificate"
+                            onerror="this.src='https://via.placeholder.com/300x200/2c3e50/ffffff?text=Python+Course+1'">
+                        <div class="certificate-overlay">
+                            <a href="images/Python Course.jpg" class="certificate-link" target="_blank">
+                                <i class="fas fa-expand"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h3 class="certificate-title">Python Course 1</h3>
+                        <p class="certificate-issuer">SIAM CUI Chapter</p>
+                        <span class="certificate-type">For organizing and conducting workshop</span>
+                    </div>
+                </div>
+
+                <!-- Certificate 3: ICACM 2025 -->
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="images/ICACM.jpg" alt="ICACM 2025 Certificate"
+                            onerror="this.src='https://via.placeholder.com/300x200/3498db/ffffff?text=ICACM+2025'">
+                        <div class="certificate-overlay">
+                            <a href="images/ICACM.jpg" class="certificate-link" target="_blank">
+                                <i class="fas fa-expand"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h3 class="certificate-title">ICACM 2025</h3>
+                        <p class="certificate-issuer">SIAM CUI Chapter</p>
+                        <span class="certificate-type">International Conference Organization</span>
+                    </div>
+                </div>
+
+                <!-- Certificate 4: Battle of Brain Quiz Competition -->
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="images/Battle of Brain Quiz Cert..jpg" alt="Battle of Brain Quiz Certificate"
+                            onerror="this.src='https://via.placeholder.com/300x200/2c3e50/ffffff?text=Battle+of+Brain'">
+                        <div class="certificate-overlay">
+                            <a href="images/Battle of Brain Quiz Cert..jpg" class="certificate-link" target="_blank">
+                                <i class="fas fa-expand"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h3 class="certificate-title">Battle of Brain Quiz Competition</h3>
+                        <p class="certificate-issuer">NUML Islamabad</p>
+                        <span class="certificate-type">1st Runner Up</span>
+                    </div>
+                </div>
+
+                <!-- Certificate 5: TriMath Quiz Competition -->
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="images/Tri Math Quiz.jpg" alt="TriMath Quiz Certificate"
+                            onerror="this.src='https://via.placeholder.com/300x200/3498db/ffffff?text=TriMath+Quiz'">
+                        <div class="certificate-overlay">
+                            <a href="images/Tri Math Quiz.jpg" class="certificate-link" target="_blank">
+                                <i class="fas fa-expand"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h3 class="certificate-title">TriMath Quiz Competition</h3>
+                        <p class="certificate-issuer">SIAM CUI Chapter</p>
+                        <span class="certificate-type">Event Organization</span>
+                    </div>
+                </div>
+
+                <!-- Certificate 6: QK Ghori Alumni Seminar Series -->
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="images/certificate-qkghori.jpg" alt="QK Ghori Seminar Certificate"
+                            onerror="this.src='https://via.placeholder.com/300x200/2c3e50/ffffff?text=QK+Ghori+Seminars'">
+                        <div class="certificate-overlay">
+                            <a href="images/certificate-qkghori.jpg" class="certificate-link" target="_blank">
+                                <i class="fas fa-expand"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h3 class="certificate-title">QK Ghori Alumni Seminar Series</h3>
+                        <p class="certificate-issuer">SIAM CUI Chapter</p>
+                        <span class="certificate-type">Organizer & Technical Coordinator (Sessions 1-5)</span>
+                    </div>
+                </div>
+
+                <!-- Certificate 7: LaTeX Workshop 2 -->
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="images/certificate-latex2.jpg" alt="LaTeX Workshop 2 Certificate"
+                            onerror="this.src='https://via.placeholder.com/300x200/3498db/ffffff?text=LaTeX+Workshop+2'">
+                        <div class="certificate-overlay">
+                            <a href="images/certificate-latex2.jpg" class="certificate-link" target="_blank">
+                                <i class="fas fa-expand"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h3 class="certificate-title">LaTeX Workshop 2</h3>
+                        <p class="certificate-issuer">SIAM CUI Chapter</p>
+                        <span class="certificate-type">For organizing and conducting workshop</span>
+                    </div>
+                </div>
+
+                <!-- Certificate 8: Python Workshop 2 -->
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="images/certificate-python2.jpg" alt="Python Workshop 2 Certificate"
+                            onerror="this.src='https://via.placeholder.com/300x200/2c3e50/ffffff?text=Python+Workshop+2'">
+                        <div class="certificate-overlay">
+                            <a href="images/certificate-python2.jpg" class="certificate-link" target="_blank">
+                                <i class="fas fa-expand"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h3 class="certificate-title">Python Workshop 2</h3>
+                        <p class="certificate-issuer">SIAM CUI Chapter</p>
+                        <span class="certificate-type">For organizing and conducting workshop</span>
+                    </div>
+                </div>
+
+                <!-- Certificate 9: Full stack web development -->
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="images/Full stack web development .jpg" alt="Full stack web development Certificate"
+                            onerror="this.src='https://via.placeholder.com/300x200/2c3e50/ffffff?text=Python+Workshop+2'">
+                        <div class="certificate-overlay">
+                            <a href="images/Full stack web development .jpg" class="certificate-link" target="_blank">
+                                <i class="fas fa-expand"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h3 class="certificate-title">Full stack web development</h3>
+                        <p class="certificate-issuer">PROFESSIONAL FREELANCING TRAINING PROGRAM</p>
+                        <span class="certificate-type">Successfully Completed Course</span>
+                    </div>
+                </div>
+
+                <!-- Certificate 10: Wordpress -->
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="images/Wordpress.jpg" alt="Wordpress Course Certificate"
+                            onerror="this.src='https://via.placeholder.com/300x200/3498db/ffffff?text=LaTeX+Workshop+2'">
+                        <div class="certificate-overlay">
+                            <a href="images/Wordpress.jpg" class="certificate-link" target="_blank">
+                                <i class="fas fa-expand"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h3 class="certificate-title">Wordpress Course</h3>
+                        <p class="certificate-issuer">Digiskills.pk</p>
+                        <span class="certificate-type">DigiSkills Training Program
+                            Batch-09 Feb 2021-May 2021</span>
+                    </div>
+                </div>
+
+                <!-- Certificate 11: Freelancing Certificate -->
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="images/Freelancing.jpg" alt="Freelancing Certificate"
+                            onerror="this.src='https://via.placeholder.com/300x200/3498db/ffffff?text=LaTeX+Workshop+2'">
+                        <div class="certificate-overlay">
+                            <a href="images/Freelancing.jpg" class="certificate-link" target="_blank">
+                                <i class="fas fa-expand"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h3 class="certificate-title">Freelancing Course</h3>
+                        <p class="certificate-issuer">Digiskills.pk</p>
+                        <span class="certificate-type">DigiSkills Training Program
+                            Batch-09 Feb 2021-May 2021</span>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Event Organization & Teaching Collaboration</h2>
+            </div>
+            <p>Interested in learning more about my event organization experience or discussing teaching opportunities?
+                I'd be happy to share insights and collaborate on future academic initiatives.</p>
+            <a href="contact.html" class="btn btn-secondary">
+                <i class="fas fa-envelope"></i> Discuss Collaboration
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <a href="index.html" class="logo" style="color: white; justify-content: center; margin-bottom: 1rem;">
+                <span class="logo-symbol">Saad</span>
+                Ullah
+            </a>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/saad-ullah-490305202"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/saadullah-m"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/su.abbasi?igsh=MWd3ZTU5Mjd1b2NibA=="><i
+                        class="fab fa-instagram"></i></a>
+                <a href="mailto:saadabbasi3018@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <div class="copyright">
+                &copy; 2024 Saad Ullah. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.mobile-menu');
+        const navMenu = document.querySelector('nav ul');
+        const header = document.getElementById('header');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.style.padding = '0.8rem 0';
+                header.style.boxShadow = '0 5px 20px rgba(0,0,0,0.1)';
+            } else {
+                header.style.padding = '1rem 0';
+                header.style.boxShadow = 'none';
+            }
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    navMenu.style.display = 'none';
+                }
+            });
+        });
+
+        // Video playback function
+        function playVideo(title) {
+            alert('Playing video: ' + title + '\n\nIn the actual implementation, this would embed and play the video recording.');
+            // Actual implementation would embed the video player here
+        }
+
+        // Add scroll animations
+        document.addEventListener('DOMContentLoaded', function () {
+            const workshopItems = document.querySelectorAll('.workshop-item');
+            const lectureItems = document.querySelectorAll('.lecture-item');
+            const recordingCards = document.querySelectorAll('.recording-card');
+            const videoCards = document.querySelectorAll('.video-card');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            workshopItems.forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
+                item.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(item);
+            });
+
+            lectureItems.forEach((item, index) => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(10px)';
+                item.style.transition = `opacity 0.5s ease ${index * 0.05}s, transform 0.5s ease ${index * 0.05}s`;
+                observer.observe(item);
+            });
+
+            recordingCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = `opacity 0.5s ease ${index * 0.05}s, transform 0.5s ease ${index * 0.05}s`;
+                observer.observe(card);
+            });
+
+            videoCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = `opacity 0.5s ease ${index * 0.05}s, transform 0.5s ease ${index * 0.05}s`;
+                observer.observe(card);
+            });
+
+            // Add this to your existing JavaScript section
+
+            // Certificate viewer functionality
+            document.addEventListener('DOMContentLoaded', function () {
+                const certificateCards = document.querySelectorAll('.certificate-card');
+
+                // Add animation to certificate cards
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                certificateCards.forEach((card, index) => {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    card.style.transition = `opacity 0.5s ease ${index * 0.1}s, transform 0.5s ease ${index * 0.1}s`;
+                    observer.observe(card);
+                });
+
+                // Certificate modal functionality (for future enhancement)
+                const certificateLinks = document.querySelectorAll('.certificate-link');
+
+                certificateLinks.forEach(link => {
+                    link.addEventListener('click', function (e) {
+                        // In a full implementation, this would open a modal with the certificate image
+                        // For now, we'll just let the link open the image in a new tab
+                        console.log('Certificate clicked: ' + this.parentElement.parentElement.nextElementSibling.querySelector('.certificate-title').textContent);
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education - Saad Ullah | Mathematics Researcher</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #7f8c8d;
+            --accent: #3498db;
+            --light: #f8f9fa;
+            --dark: #2c3e50;
+            --text: #333333;
+            --background: #ffffff;
+            --border: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--background);
+            font-weight: 400;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header & Navigation - Standardized */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Source Serif Pro', serif;
+        }
+
+        .logo-symbol {
+            color: var(--accent);
+            font-weight: 400;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            font-size: 0.85rem;
+            transition: color 0.3s ease;
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        nav a.active {
+            color: var(--accent);
+        }
+
+        nav a.active:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--accent);
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.3rem;
+            cursor: pointer;
+            color: var(--primary);
+        }
+
+        /* Page Header - Standardized with increased height */
+        .page-header {
+            padding: 8rem 0 3rem;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            text-align: center;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .page-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-family: 'Source Serif Pro', serif;
+        }
+
+        .page-subtitle {
+            font-size: 1rem;
+            color: var(--secondary);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        /* Main Sections - Standardized */
+        .main-section {
+            padding: 3rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+            font-family: 'Source Serif Pro', serif;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 3px;
+            background: var(--accent);
+        }
+
+        /* Education Timeline */
+        .education-timeline {
+            background: var(--background);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--accent);
+            opacity: 0.3;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-left: 80px;
+        }
+
+        .timeline-date {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 60px;
+            text-align: center;
+            background: var(--accent);
+            color: white;
+            padding: 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+        }
+
+        .timeline-content {
+            background: var(--background);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .timeline-content:before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .timeline-content h3 {
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .timeline-content .institution {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+
+        .timeline-content p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .coursework {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .coursework h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .coursework-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .course-tag {
+            background: var(--light);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--primary);
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .course-tag:hover {
+            background: var(--accent);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Honors & Awards Section */
+        .honors-section {
+            background: var(--light);
+        }
+
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .award-card {
+            background: white;
+            padding: 1.8rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+            border-left: 4px solid var(--accent);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .award-card:before {
+            content: '🏆';
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.5rem;
+            opacity: 0.1;
+        }
+
+        .award-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .award-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-family: 'Source Serif Pro', serif;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .award-type {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: block;
+            font-size: 0.9rem;
+        }
+
+        .award-date {
+            color: var(--secondary);
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+            display: block;
+            background: var(--light);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        .award-card p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* Academic Journey */
+        .journey-section {
+            background: var(--background);
+        }
+
+        .journey-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .journey-content p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+
+        .stat-card {
+            background: var(--light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 1px solid var(--border);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .stat-icon {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 0.8rem;
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--secondary);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        /* Contact CTA - Standardized */
+        .contact-cta {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+        }
+
+        .contact-cta .section-title {
+            color: white;
+        }
+
+        .contact-cta .section-title:after {
+            background: white;
+        }
+
+        .contact-cta p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            padding: 0.8rem 1.8rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.9rem;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* Footer - Standardized */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            margin: 1.2rem 0;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.3rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+        }
+
+        .copyright {
+            margin-top: 1.2rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.8rem;
+        }
+
+        /* Responsive Design - Standardized */
+        @media (max-width: 968px) {
+            .awards-grid {
+                grid-template-columns: 1fr;
+                max-width: 600px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .page-header {
+                padding: 6rem 0 2rem;
+                min-height: 250px;
+            }
+
+            .page-title {
+                font-size: 1.8rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .timeline:before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                padding-left: 60px;
+            }
+
+            .timeline-date {
+                width: 40px;
+                font-size: 0.7rem;
+                padding: 0.3rem;
+            }
+
+            .timeline-content:before {
+                left: -8px;
+                width: 16px;
+                height: 16px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .coursework-list {
+                justify-content: center;
+            }
+
+            .timeline-content {
+                padding: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-symbol">Saad</span>
+                Ullah
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="education.html" class="active">Education</a></li>
+                    <li><a href="achievements.html">Experiences & Achievements</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Education</h1>
+            <p class="page-subtitle">My academic journey through the world of mathematics</p>
+        </div>
+    </section>
+
+    <!-- Education Timeline -->
+    <section class="education-timeline main-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Academic Journey</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2021-2025</div>
+                    <div class="timeline-content">
+                        <h3><i class="fas fa-university"></i> Bachelor of Science in Mathematics</h3>
+                        <span class="institution">COMSATS University Islamabad</span>
+                        <p>Focus on advanced mathematical concepts with specialization in Algebraic Geometry and its
+                            applications to cryptography. Completed comprehensive coursework in pure and applied
+                            mathematics.</p>
+
+                        <div class="coursework">
+                            <h4><i class="fas fa-book-open"></i> Key Coursework:</h4>
+                            <div class="coursework-list">
+                                <span class="course-tag">Abstract Algebra</span>
+                                <span class="course-tag">Number Theory</span>
+                                <span class="course-tag">Algebraic Geometry</span>
+                                <span class="course-tag">Computational Mathematics</span>
+                                <span class="course-tag">Linear Algebra</span>
+                                <span class="course-tag">Mathematical Analysis</span>
+                                <span class="course-tag">Cryptography</span>
+                                <span class="course-tag">Probability & Statistics</span>
+                            </div>
+                        </div>
+
+                        <div class="coursework" style="margin-top: 1rem;">
+                            <h4><i class="fas fa-graduation-cap"></i> Thesis:</h4>
+                            <p><strong>"Elliptic Curve Cryptography"</strong> - Research on the mathematical foundations
+                                and practical implementations of elliptic curves in cryptographic systems.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2018-2020</div>
+                    <div class="timeline-content">
+                        <h3><i class="fas fa-laptop-code"></i> Intermediate in Computer Science (ICS)</h3>
+                        <span class="institution">The Peace Group of Schools and Colleges Abbottabad</span>
+                        <p>Foundation in computer science and mathematics with focus on programming fundamentals and
+                            mathematical reasoning. Developed strong analytical and problem-solving skills.</p>
+
+                        <div class="coursework">
+                            <h4><i class="fas fa-book"></i> Key Subjects:</h4>
+                            <div class="coursework-list">
+                                <span class="course-tag">Mathematics</span>
+                                <span class="course-tag">Physics</span>
+                                <span class="course-tag">Computer Science</span>
+                                <span class="course-tag">C++ Programming</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2016-2018</div>
+                    <div class="timeline-content">
+                        <h3><i class="fas fa-school"></i> Matriculation in Science</h3>
+                        <span class="institution">Syed Ahmed Shaheed Academy Moolia Abbottabad</span>
+                        <p>Completed foundational education in science stream with strong emphasis on mathematics and
+                            scientific principles. Developed initial interest in mathematical problem-solving.</p>
+
+                        <div class="coursework">
+                            <h4><i class="fas fa-atom"></i> Science Stream:</h4>
+                            <div class="coursework-list">
+                                <span class="course-tag">Mathematics</span>
+                                <span class="course-tag">Physics</span>
+                                <span class="course-tag">Chemistry</span>
+                                <span class="course-tag">Biology</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Honors & Awards Section -->
+    <section class="honors-section main-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Scholarships & Recognition</h2>
+            </div>
+            <div class="awards-grid">
+                <div class="award-card">
+                    <h3><i class="fas fa-award"></i> Undergraduate Merit Scholarship</h3>
+                    <span class="award-type">Merit-based Scholarship</span>
+                    <span class="award-date">2022</span>
+                    <p>Awarded based on academic performance during undergraduate studies at COMSATS University
+                        Islamabad, supporting continued education in mathematics.</p>
+                </div>
+
+                <div class="award-card">
+                    <h3><i class="fas fa-medal"></i> School Merit Scholarships</h3>
+                    <span class="award-type">Merit-based Awards</span>
+                    <span class="award-date">Class 1 - 10</span>
+                    <p>Received consistent merit-based scholarships throughout school education from Class 1 to
+                        Matriculation, recognizing academic performance and dedication to studies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Journey -->
+    <section class="journey-section main-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Academic Journey</h2>
+            </div>
+            <div class="journey-content">
+                <p>My educational path has been focused on developing a strong foundation in mathematics and
+                    computational thinking, with consistent progress through each level of study.</p>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Education Levels</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Scholarships</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Math Courses</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">Computing Languages</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta main-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Academic Documents</h2>
+            </div>
+            <p>For detailed academic records, transcripts, or verification of scholarships, please feel free to contact
+                me directly.</p>
+            <a href="contact.html" class="btn btn-secondary">
+                <i class="fas fa-envelope"></i> Request Documents
+            </a>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <a href="index.html" class="logo" style="color: white; justify-content: center; margin-bottom: 1rem;">
+                <span class="logo-symbol">Saad</span>
+                Ullah
+            </a>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/saad-ullah-490305202"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/saadullah-m"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/su.abbasi?igsh=MWd3ZTU5Mjd1b2NibA=="><i
+                        class="fab fa-instagram"></i></a>
+                <a href="mailto:saadabbasi3018@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <div class="copyright">
+                &copy; 2024 Saad Ullah. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.mobile-menu');
+        const navMenu = document.querySelector('nav ul');
+        const header = document.getElementById('header');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Navbar scroll effect - Standardized
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.style.padding = '0.8rem 0';
+                header.style.boxShadow = '0 5px 20px rgba(0,0,0,0.1)';
+            } else {
+                header.style.padding = '1rem 0';
+                header.style.boxShadow = 'none';
+            }
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) {
+                    navMenu.style.display = 'none';
+                }
+            });
+        });
+
+        // Add subtle animation to timeline items
+        document.addEventListener('DOMContentLoaded', function () {
+            const timelineItems = document.querySelectorAll('.timeline-item');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            timelineItems.forEach(item => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(20px)';
+                item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(item);
+            });
+        });
+    </script>
+</body>
+
+</html>
