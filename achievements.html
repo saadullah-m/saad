@@ -302,100 +302,6 @@
             font-size: 0.9rem;
         }
 
-        /* Video Section */
-        .video-section {
-            margin-top: 2rem;
-            padding-top: 2rem;
-            border-top: 2px solid var(--border);
-        }
-
-        .video-section h3 {
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 1.2rem;
-        }
-
-        .videos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .video-card {
-            background: var(--light);
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-            border: 1px solid var(--border);
-        }
-
-        .video-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .video-thumbnail {
-            width: 100%;
-            height: 160px;
-            background: linear-gradient(135deg, var(--primary), var(--dark));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            position: relative;
-            cursor: pointer;
-        }
-
-        .video-thumbnail:after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 60px;
-            height: 60px;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Font Awesome 6 Free';
-            content: '\f04b';
-            font-weight: 900;
-            color: var(--accent);
-            font-size: 1.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .video-thumbnail:hover:after {
-            transform: translate(-50%, -50%) scale(1.1);
-        }
-
-        .video-info {
-            padding: 1.2rem;
-        }
-
-        .video-title {
-            font-weight: 600;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-            font-size: 0.95rem;
-        }
-
-        .video-speaker {
-            color: var(--accent);
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-            font-size: 0.85rem;
-        }
-
-        .video-duration {
-            color: var(--secondary);
-            font-size: 0.8rem;
-        }
-
         /* Teaching Experience Section */
         .teaching-experience {
             background: white;
@@ -892,10 +798,6 @@
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
             }
-
-            .videos-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
         }
 
         @media (max-width: 768px) {
@@ -938,8 +840,7 @@
             }
 
             .recordings-grid,
-            .lectures-grid,
-            .videos-grid {
+            .lectures-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -1061,32 +962,6 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="video-section">
-                    <h3><i class="fas fa-video"></i> Conference Recordings</h3>
-                    <div class="videos-grid">
-                        <div class="video-card">
-                            <div class="video-thumbnail" onclick="playVideo('Advances in Computational Mathematics')">
-                                <!-- Video thumbnail -->
-                            </div>
-                            <div class="video-info">
-                                <div class="video-title">Advances in Computational Mathematics</div>
-                                <div class="video-speaker">Dr. Ahmed Khan</div>
-                                <div class="video-duration">45 minutes</div>
-                            </div>
-                        </div>
-                        <div class="video-card">
-                            <div class="video-thumbnail" onclick="playVideo('Mathematical Modeling Applications')">
-                                <!-- Video thumbnail -->
-                            </div>
-                            <div class="video-info">
-                                <div class="video-title">Mathematical Modeling Applications</div>
-                                <div class="video-speaker">Dr. Sarah Mohammad</div>
-                                <div class="video-duration">38 minutes</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <!-- Event 2: Q K Ghori Seminar Series -->
@@ -1153,42 +1028,6 @@
                         <div class="detail-text">
                             <div class="detail-label">Speakers</div>
                             <div class="detail-value">8 Alumni Experts</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="video-section">
-                    <h3><i class="fas fa-video"></i> Seminar Recordings</h3>
-                    <div class="videos-grid">
-                        <div class="video-card">
-                            <div class="video-thumbnail" onclick="playVideo('Research Methodologies Session')">
-                                <!-- Video thumbnail -->
-                            </div>
-                            <div class="video-info">
-                                <div class="video-title">Research Methodologies in Pure Mathematics</div>
-                                <div class="video-speaker">Session 1 - Dr. Ali Raza</div>
-                                <div class="video-duration">52 minutes</div>
-                            </div>
-                        </div>
-                        <div class="video-card">
-                            <div class="video-thumbnail" onclick="playVideo('Computational Approaches Session')">
-                                <!-- Video thumbnail -->
-                            </div>
-                            <div class="video-info">
-                                <div class="video-title">Computational Approaches to Number Theory</div>
-                                <div class="video-speaker">Session 2 - Dr. Fatima Noor</div>
-                                <div class="video-duration">48 minutes</div>
-                            </div>
-                        </div>
-                        <div class="video-card">
-                            <div class="video-thumbnail" onclick="playVideo('Cryptography Session')">
-                                <!-- Video thumbnail -->
-                            </div>
-                            <div class="video-info">
-                                <div class="video-title">Algebraic Geometry in Modern Cryptography</div>
-                                <div class="video-speaker">Session 3 - Dr. Hassan Mahmood</div>
-                                <div class="video-duration">55 minutes</div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -1259,6 +1098,112 @@
                         <div class="detail-text">
                             <div class="detail-label">Competition</div>
                             <div class="detail-value">3 Rounds, Multiple Categories</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event 4: One-Day Symposium on Emerging Trends in Mathematics, AI, and Computing -->
+            <div class="workshop-item">
+                <div class="workshop-header">
+                    <div>
+                        <h3 class="workshop-title">One-Day Symposium on Emerging Trends in Mathematics, AI, and
+                            Computing</h3>
+                        <span class="workshop-role">Organizer & Technical Coordinator</span>
+                    </div>
+                    <span class="workshop-date">2025</span>
+                </div>
+
+                <div class="workshop-content">
+                    <div class="workshop-description">
+                        <p>The SIAM Student Chapter at COMSATS University Islamabad organized a One-Day Symposium on
+                            Emerging Trends in Mathematics, AI, and Computing in collaboration with Middle Tennessee
+                            State University, USA. This event brought together students, researchers, and academicians
+                            to explore the foundational role of mathematics in advancing artificial intelligence and
+                            modern computing.</p>
+
+                        <p>My primary responsibilities included managing all technical aspects of the symposium and
+                            overseeing event operations to ensure smooth execution. Distinguished speakers discussed
+                            neural networks, data from pebbles to quantum bytes, and the mathematical principles driving
+                            today's AI innovations.</p>
+                    </div>
+                    <div class="workshop-images">
+                        <img src="images/ETMAC 1.JPG" alt="Symposium Poster" class="workshop-image"
+                            onerror="this.src='https://via.placeholder.com/600x150/3498db/ffffff?text=Symposium+Poster'">
+                        <img src="images/ETMAC 2.JPG" alt="Symposium Certificate" class="workshop-image"
+                            onerror="this.src='https://via.placeholder.com/600x150/2c3e50/ffffff?text=Symposium+Certificate'">
+                    </div>
+                </div>
+
+                <div class="workshop-details">
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="detail-text">
+                            <div class="detail-label">Venue</div>
+                            <div class="detail-value">EE Seminar Hall, COMSATS University Islamabad</div>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+                        <div class="detail-text">
+                            <div class="detail-label">Date</div>
+                            <div class="detail-value">13th November, 2025</div>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="detail-text">
+                            <div class="detail-label">Participants</div>
+                            <div class="detail-value">Students, Researchers & Academicians</div>
+                        </div>
+                    </div>
+                    <div class="detail-item">
+                        <div class="detail-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="detail-text">
+                            <div class="detail-label">Collaboration</div>
+                            <div class="detail-value">Middle Tennessee State University, USA</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-section">
+                    <h3><i class="fas fa-microphone-alt"></i> Featured Speakers</h3>
+                    <div class="workshop-details">
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="detail-text">
+                                <div class="detail-label">Keynote Speaker</div>
+                                <div class="detail-value">Prof. Dr. AbdulQayyum M. Khaliq, Middle Tennessee State
+                                    University</div>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="detail-text">
+                                <div class="detail-label">Guest Speaker</div>
+                                <div class="detail-value">Prof. Dr. Shamsul Islam, COMSATS University Islamabad</div>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="detail-text">
+                                <div class="detail-label">Guest Speaker</div>
+                                <div class="detail-value">Dr. Mansoor Shaukat Khan, COMSATS University Islamabad</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1894,8 +1839,6 @@
         </div>
     </section>
 
-
-
     <!-- Certificates Section -->
     <section class="certificates-section">
         <div class="container">
@@ -2105,7 +2048,24 @@
                     </div>
                 </div>
 
-
+                <!-- Certificate 12: ETMAC Certificate -->
+                <div class="certificate-card">
+                    <div class="certificate-image">
+                        <img src="images/ETMAC Cer.jpeg"
+                            alt="Emerging Trends in Mathematics, AI and Computing Certificate"
+                            onerror="this.src='https://via.placeholder.com/300x200/3498db/ffffff?text=AI+and+Computing+Symposium'">
+                        <div class="certificate-overlay">
+                            <a href="images/ETMAC Cer.jpeg" class="certificate-link" target="_blank">
+                                <i class="fas fa-expand"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h3 class="certificate-title">Emerging Trends in Mathematics, AI and Computing</h3>
+                        <p class="certificate-issuer">SIAM CUI Chapter</p>
+                        <span class="certificate-type">Symposium Organization</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -2174,18 +2134,11 @@
             });
         });
 
-        // Video playback function
-        function playVideo(title) {
-            alert('Playing video: ' + title + '\n\nIn the actual implementation, this would embed and play the video recording.');
-            // Actual implementation would embed the video player here
-        }
-
         // Add scroll animations
         document.addEventListener('DOMContentLoaded', function () {
             const workshopItems = document.querySelectorAll('.workshop-item');
             const lectureItems = document.querySelectorAll('.lecture-item');
             const recordingCards = document.querySelectorAll('.recording-card');
-            const videoCards = document.querySelectorAll('.video-card');
 
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -2216,15 +2169,6 @@
                 card.style.transition = `opacity 0.5s ease ${index * 0.05}s, transform 0.5s ease ${index * 0.05}s`;
                 observer.observe(card);
             });
-
-            videoCards.forEach((card, index) => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(20px)';
-                card.style.transition = `opacity 0.5s ease ${index * 0.05}s, transform 0.5s ease ${index * 0.05}s`;
-                observer.observe(card);
-            });
-
-            // Add this to your existing JavaScript section
 
             // Certificate viewer functionality
             document.addEventListener('DOMContentLoaded', function () {
@@ -2261,5 +2205,4 @@
         });
     </script>
 </body>
-
 </html>
