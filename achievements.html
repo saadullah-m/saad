@@ -254,6 +254,21 @@
             transition: transform 0.3s ease;
         }
 
+        .workshop-images-latex {
+            display: flex;
+            flex-direction: row;
+            gap: 0.8rem;
+        }
+
+        .workshop-image-latex {
+            width: 50%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 6px;
+            transition: transform 0.3s ease;
+        }
+
+
         .workshop-image:hover {
             transform: scale(1.03);
         }
@@ -1239,10 +1254,10 @@
                             exercises that helped students immediately apply their new skills to their academic work.
                         </p>
                     </div>
-                    <div class="workshop-images">
-                        <img src="images/Latex C I.jpeg" alt="Python Session Teaching" class="workshop-image"
+                    <div class="workshop-images-latex">
+                        <img src="images/Latex C I.jpeg" alt="Python Session Teaching" class="workshop-image-latex"
                             onerror="this.src='https://via.placeholder.com/600x150/3498db/ffffff?text=Python+Session'">
-                        <img src="images/Latex C I 1.jpeg" alt="LaTeX Session Teaching" class="workshop-image"
+                        <img src="images/Latex C I 1.jpeg" alt="LaTeX Session Teaching" class="workshop-image-latex"
                             onerror="this.src='https://via.placeholder.com/600x150/2c3e50/ffffff?text=LaTeX+Session'">
                     </div>
                 </div>
@@ -2205,4 +2220,5 @@
         });
     </script>
 </body>
+
 </html>
