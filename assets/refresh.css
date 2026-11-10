@@ -93,3 +93,18 @@
 .workshop-art>span,.workshop-art.python>span{font-size:28px}
 .workshop-copy h3{font-size:22px;font-weight:700;color:#30283f}
 @media(max-width:560px){.workshop-compact{grid-template-columns:minmax(0,1fr);padding:18px;gap:16px}.workshop-compact>.editorial-photo,.workshop-compact>.workshop-art{grid-column:1;grid-row:2;width:150px}.workshop-copy h3{font-size:19px}}
+
+/* Balanced workshop photographs and mentoring cards. */
+.workshop-compact{grid-template-columns:minmax(0,1fr) 190px}
+.workshop-compact img{width:100%;height:150px;object-fit:cover}
+.restored-content .mentoring-card{display:grid;grid-template-columns:minmax(0,1fr) 160px;align-items:center;gap:28px;padding:26px;border:1px solid #dedce8;border-left:4px solid #78709c;border-radius:12px;box-shadow:0 4px 16px #29233e08;background:#fff}
+.restored-content .mentoring-card .workshop-title{font-size:22px;font-weight:700;color:#30283f}
+.mentoring-art img{display:block;width:100%;height:auto;border-radius:9px}
+.restored-content #graduate-circle .mentoring-card{grid-template-columns:minmax(0,1fr) 210px}
+@media(max-width:560px){
+.workshop-compact{grid-template-columns:minmax(0,1fr)}
+.workshop-compact>.editorial-photo,.workshop-compact>.workshop-art{width:190px}
+.restored-content .mentoring-card,.restored-content #graduate-circle .mentoring-card{grid-template-columns:minmax(0,1fr);padding:18px;gap:18px}
+.mentoring-art{width:150px;justify-self:end}
+.restored-content .mentoring-card .workshop-title{font-size:19px}
+}
