@@ -24,3 +24,12 @@ Every item below retains a visible place in the website. Existing content is pre
 - Q K Ghori series: original date range says 2024–2025 and detailed duration says January–May 2024.
 - Undergraduate scholarship: website specifies 2022; CV specifies 2021–2025.
 All original descriptions, numbers, dates, and roles are preserved for review.
+
+
+## November 10 structure revision
+- Homepage is a concise introduction, not a duplicate of detailed pages.
+- Teaching owns tutoring, both workshops, all 18 slide entries and all 16 recording entries.
+- Experience owns academic events, graduate study circle, and the 12-entry certificate archive.
+- The earlier homepage narrative is retained under About in a closed background archive.
+- Archives use native keyboard-accessible details controls; hash links reveal closed parents.
+- Browser visual QA unavailable in this environment; source, anchors, resource counts and deployment checked.

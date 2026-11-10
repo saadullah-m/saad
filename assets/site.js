@@ -13,3 +13,12 @@ if (toggle && navigation) {
   document.documentElement.classList.add('js');
 }
 document.querySelector('[data-print]')?.addEventListener('click', () => window.print());
+
+function revealArchiveTarget(){
+ const id=decodeURIComponent(location.hash.slice(1)); if(!id)return;
+ const target=document.getElementById(id); if(!target)return;
+ let parent=target.parentElement; while(parent){if(parent.tagName==="DETAILS")parent.open=true;parent=parent.parentElement;}
+ requestAnimationFrame(()=>target.scrollIntoView({block:"start"}));
+}
+window.addEventListener("hashchange",revealArchiveTarget);
+revealArchiveTarget();
