@@ -4,3 +4,41 @@
 @media(max-width:800px){.workshop-grid{grid-template-columns:1fr}.workshop-compact{grid-template-columns:180px minmax(0,1fr)}.workshop-compact img{min-height:220px}.landing-block{gap:30px}.landing-visual img{height:270px}.hero{min-height:0}.teaching-intro .container{grid-template-columns:1fr;gap:20px}.about-story{grid-template-columns:1.3fr .8fr;gap:30px}.about-footnote{display:block}.about-footnote a{display:inline-block;margin-top:20px}}
 @media(max-width:560px){.hero{gap:35px}.hero-media{max-width:290px}.landing-block,.about-story{grid-template-columns:1fr;gap:28px}.landing-block.reverse .landing-copy,.landing-block.reverse>.landing-visual,.landing-block.reverse>.certificate-preview{grid-column:auto;grid-row:auto}.landing-visual img{height:250px}.home-about{padding:45px 0}.home-feature{padding:38px 0}.workshop-compact{grid-template-columns:95px minmax(0,1fr)}.workshop-copy{padding:18px}.workshop-copy h3{font-size:18px}.workshop-art{padding:8px}.workshop-art>span{font-size:30px}.workshop-art small{font-size:7px}.restored-content .event-compact{grid-template-columns:1fr;gap:20px;padding:25px 0}.restored-content .event-compact>.workshop-images{grid-template-columns:1fr 1fr}.restored-content .event-compact .workshop-images img{height:130px}.restored-content .event-compact .video-section .workshop-details{grid-template-columns:1fr}.about-portrait{max-width:290px;margin:auto;width:100%}.certificate-preview img{height:220px}.restored-content .event-compact .workshop-header{flex-direction:column}.landing-copy>p:not(.eyebrow){font-size:15px}.portrait-caption{font-size:10px}.about-copy h2{font-size:30px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Distinct, compact experience cards. */
+.restored-content .event-compact{
+  grid-template-columns:190px minmax(0,1fr);gap:24px;
+  margin:0 0 22px;padding:22px;
+  background:#fff;border:1px solid #dedce8;border-left:4px solid #78709c;
+  border-radius:12px;box-shadow:0 4px 16px #29233e08;overflow:hidden;
+}
+.restored-content .event-compact:last-child{margin-bottom:0}
+.restored-content .event-compact>.workshop-images{gap:10px}
+.restored-content .event-compact .workshop-images a{display:block;border-radius:7px;overflow:hidden}
+.restored-content .event-compact .workshop-images img{display:block;height:128px;border-radius:7px;margin:0}
+.restored-content .event-compact .workshop-header{
+  display:flex;align-items:flex-start;justify-content:space-between;
+  padding:0 0 13px;margin:0 0 13px;border-bottom:1px solid #eeecf3;gap:16px;
+}
+.restored-content .event-compact .workshop-title{font-size:20px;line-height:1.35;color:#343047;margin:0}
+.restored-content .event-compact .workshop-role{display:inline-block;color:#6d638d;font-size:11px;font-weight:600;margin-top:8px;line-height:1.5}
+.restored-content .event-compact .workshop-date{flex-shrink:0;background:#efedf6;color:#594f79;border:1px solid #e4dfef;border-radius:6px;padding:5px 9px;font-size:11px;line-height:1.4}
+.restored-content .event-compact .workshop-content{display:block;margin:0;padding:0}
+.restored-content .event-compact .workshop-description p{font-size:13px;line-height:1.75}
+.restored-content .event-compact .workshop-details{background:#f8f7fb;border:0;border-radius:7px;padding:12px 14px;margin-top:15px;gap:10px 20px}
+.restored-content .event-compact .detail-label{font-size:9px;line-height:1.5;margin-bottom:3px}
+.restored-content .event-compact .detail-value{font-size:11px;line-height:1.5}
+.restored-content .event-compact .video-section{margin-top:14px}
+@media(max-width:760px){
+ .restored-content .event-compact{grid-template-columns:145px minmax(0,1fr);gap:18px;padding:18px}
+ .restored-content .event-compact .workshop-title{font-size:18px}
+ .restored-content .event-compact .workshop-images img{height:115px}
+}
+@media(max-width:560px){
+ .restored-content .event-compact{grid-template-columns:minmax(0,1fr);padding:16px;gap:16px;margin-bottom:18px;border-radius:10px}
+ .restored-content .event-compact>.workshop-images{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .restored-content .event-compact .workshop-images img{height:110px}
+ .restored-content .event-compact .workshop-header{flex-direction:row;gap:10px}
+ .restored-content .event-compact .workshop-title{font-size:17px}
+ .restored-content .event-compact .workshop-details{gap:10px;padding:11px}
+}
