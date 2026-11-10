@@ -82,3 +82,14 @@
  .workshop-copy h3{font-size:21px}
  .restored-content .certificates-grid{grid-template-columns:minmax(0,1fr)}
 }
+
+/* Consistent teaching cards with compact media. */
+.restored-content #certificates-section h2,.restored-content #certificates-section .certificate-title{font-weight:700}
+.workshop-compact{grid-template-columns:minmax(0,1fr) 150px;gap:24px;align-items:center;padding:22px;border:1px solid #dedce8;border-left:4px solid #78709c;border-radius:12px;box-shadow:0 4px 16px #29233e08}
+.workshop-compact>.workshop-copy{grid-column:1;grid-row:1;padding:0}
+.workshop-compact>.editorial-photo,.workshop-compact>.workshop-art{grid-column:2;grid-row:1;border-radius:7px;overflow:hidden}
+.workshop-compact img{height:128px;min-height:0;display:block}
+.workshop-compact>.workshop-art{height:100px;min-height:0;gap:10px;padding:12px}
+.workshop-art>span,.workshop-art.python>span{font-size:28px}
+.workshop-copy h3{font-size:22px;font-weight:700;color:#30283f}
+@media(max-width:560px){.workshop-compact{grid-template-columns:minmax(0,1fr);padding:18px;gap:16px}.workshop-compact>.editorial-photo,.workshop-compact>.workshop-art{grid-column:1;grid-row:2;width:150px}.workshop-copy h3{font-size:19px}}
