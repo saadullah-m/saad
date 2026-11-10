@@ -58,3 +58,27 @@
  .restored-content .event-compact>.workshop-images{grid-column:1;grid-row:2}
  .restored-content .event-compact .workshop-title{font-size:19px}
 }
+
+/* Spacious teaching rows and a compact certificate gallery. */
+.workshop-grid{grid-template-columns:minmax(0,1fr);gap:22px}
+.workshop-compact{grid-template-columns:220px minmax(0,1fr)}
+.workshop-compact img{min-height:220px}
+.workshop-copy{padding:28px 32px}
+.workshop-copy h3{font-size:23px}
+.workshop-copy>p:not(.card-meta){font-size:14px;max-width:85ch}
+.restored-content .certificates-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.restored-content #certificates-section .certificate-image img{height:155px;padding:10px}
+.restored-content .certificate-info{padding:14px}
+.restored-content .certificate-title{font-size:15px;margin-bottom:8px}
+.restored-content .certificate-issuer,.restored-content .certificate-type{font-size:12px}
+@media(max-width:1000px){
+ .restored-content .certificates-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:560px){
+ .workshop-compact{grid-template-columns:minmax(0,1fr)}
+ .workshop-compact img{height:180px;min-height:0}
+ .workshop-art{min-height:130px}
+ .workshop-copy{padding:22px}
+ .workshop-copy h3{font-size:21px}
+ .restored-content .certificates-grid{grid-template-columns:minmax(0,1fr)}
+}
