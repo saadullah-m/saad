@@ -109,13 +109,3 @@
 .restored-content .mentoring-card .workshop-title{font-size:19px}
 }
 
-/* Narrower, taller workshops and study-preparation cards. */
-#teaching-experience .workshop-grid{max-width:920px;margin-inline:auto}
-#teaching-experience .workshop-compact{min-height:250px;padding:30px;gap:28px}
-.restored-content #graduate-circle .container,.restored-content #tutoring .container{max-width:920px;margin-inline:auto}
-.restored-content #graduate-circle .mentoring-card{min-height:290px;padding:32px}
-.restored-content #tutoring .mentoring-card{padding:28px}
-@media(max-width:600px){
- #teaching-experience .workshop-compact{min-height:0;padding:20px;gap:20px}
- .restored-content #graduate-circle .mentoring-card,.restored-content #tutoring .mentoring-card{min-height:0;padding:20px}
-}
